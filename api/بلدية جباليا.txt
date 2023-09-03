@@ -1,0 +1,4 @@
+-بلدية جباليا النزلة
+Client ID	COURTS_MUJABALIA
+Client Secret	1111111111
+Client Secret	_e0d668452ab87440a6552459facec9f70bf55d4e9f

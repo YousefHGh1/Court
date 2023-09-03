@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "dd7be056-da90-44a1-8b8f-d8fde80fc536",
+		"name": "MUJABALIA-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2089591"
+	},
+	
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ssoidp.gov.ps/sso/module.php/sspoauth2/token.php",
+					"protocol": "https",
+					"host": [
+						"ssoidp",
+						"gov",
+						"ps"
+					],
+					"path": [
+						"sso",
+						"module.php",
+						"sspoauth2",
+						"token.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "المواطنين برقم الهوية",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-sso-authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "",
+						"description": "رقم هوية المستخدم للنظام",
+						"type": "text"
+					},
+					{
+						"key": "x-user-ip",
+						"value": "",
+						"description": "ip جهاز مستخدم النظام",
+						"type": "text"
+					},
+					{
+						"key": "x-user-agent",
+						"value": "",
+						"description": "بيانات جهاز مستخدم النظام user agent",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ws.gov.ps/citizen/id/:id",
+					"protocol": "https",
+					"host": [
+						"ws",
+						"gov",
+						"ps"
+					],
+					"path": [
+						"citizen",
+						"id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "xxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "التواصل برقم الهوية",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-sso-authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "",
+						"description": "رقم هوية المستخدم للنظام",
+						"type": "text"
+					},
+					{
+						"key": "x-user-ip",
+						"value": "",
+						"description": "ip جهاز مستخدم النظام",
+						"type": "text"
+					},
+					{
+						"key": "x-user-agent",
+						"value": "",
+						"description": "بيانات جهاز مستخدم النظام user agent",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ws.gov.ps/citizen/detailed-sso-info/id/:id",
+					"protocol": "https",
+					"host": [
+						"ws",
+						"gov",
+						"ps"
+					],
+					"path": [
+						"citizen",
+						"detailed-sso-info",
+						"id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "xxxxx"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
